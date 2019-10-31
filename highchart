@@ -1,0 +1,50 @@
+myOptions = {
+        
+        title: {
+          text: 'Average Time Spent in Citirisk'
+      },
+
+      xAxis: {
+          tickInterval: 1,
+          type: 'logarithmic'
+      },
+
+      yAxis: [{ // left y axis
+        title: {
+            text: null
+        },
+        labels: {
+            align: 'left',
+            x: 3,
+            y: 16,
+            format: '{value:.,0f}'
+        },
+        showFirstLabel: false
+    }, { // right y axis
+        linkedTo: 0,
+        gridLineWidth: 0,
+        opposite: true,
+        title: {
+            text: null
+        },
+        labels: {
+            align: 'right',
+            x: -3,
+            y: 16,
+            format: '{value:.,0f}'
+        },
+        showFirstLabel: false
+    }],
+
+      tooltip: {
+          headerFormat: '<b>{series.name}</b><br />',
+          pointFormat: 'x = {point.x}, y = {point.y}'
+      },
+      
+
+      series: [{
+          data: [1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
+          pointStart: 1
+      }]
+    
+  };
